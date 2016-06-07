@@ -28,7 +28,7 @@ ItalicFont = Fontin-Italic.otf
 {Fontin.otf}
 %%%
 
-%CV Sections inspired by: 
+%CV Sections inspired by:
 %http://stefano.italians.nl/archives/26
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{0pt}{3pt}
@@ -43,7 +43,7 @@ ItalicFont = Fontin-Italic.otf
 
 \setlength{\TPHorizModule}{30mm}
 \setlength{\TPVertModule}{\TPHorizModule}
-\textblockorigin{2mm}{0.65\paperheight}
+\textblockorigin{1mm}{0.65\paperheight}
 \setlength{\parindent}{0pt}
 \def\footerlink{}
 
@@ -53,60 +53,87 @@ ItalicFont = Fontin-Italic.otf
 %WATERMARK TEST [**not part of a CV**]---------------
 %\font\wm=''Baskerville:color=787878'' at 8pt
 %\font\wmweb=''Baskerville:color=FF1493'' at 8pt
-%{\wm 
+%{\wm
 %	\begin{textblock}{1}(0,0)
 %		\rotatebox{-90}{\parbox{500mm}{
-%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
+%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for
 %			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
 %		}
 %	}
 %	\end{textblock}
 %}
 
-\pagestyle{empty} % non-numbered pages
+% \pagestyle{empty} % non-numbered pages
 
 \font\fb=''[cmr10]'' %for use with \LaTeX command
 
 %--------------------TITLE-------------
 \par{\centering
-		{\Huge Saranya \textsc{Velusamy}
+		{\Huge Saranya Velusamy
 	} \\ \vskip-\lastskip%
-	{\fontfamily{pzc}\selectfont\Large Curriculum vitae}
+%	{\fontfamily{pzc}\selectfont\Large Curriculum Vit\ae}
+\begin{tabular}{rl}
+\href{mailto:saranya91velusamy@gmail.com}{saranya91velusamy@gmail.com}&
+    {github:} \href{https://github.com/GalanthusPlicatus}{GalanthusPlicatus}\textsc +91 87608 66018\\
+    \textsc \#1647/62, East End Main Rd, Jayanagar 9\textsuperscript{th} Block, Bangalore 560069, KA\\
+\end{tabular}
+
 	\bigskip
 	\par}
 
 %--------------------SECTIONS-----------------------------------
 %Section: Personal Data
-\section{Personal Data}
+% \section{Personal Data}
 
+% \begin{tabular}{rl}
+%     \textsc{date of birth:} & 15 December 1991 \\
+%     \textsc{address:}   & 1647/62, East End Main Rd, Jayanagar 9\textsuperscript{th} Block, Bangalore 560069, KA \\
+%     %\textsc{Permanent Address:}   & 6/32, Siruvani Main Rd, Alandurai, Coimbarote 641101, IN \\
+%     \textsc{phone:}     & +91 87608 66018\\
+%     \textsc{email:}     & \href{mailto:saranya91velusamy@gmail.com}{saranya91velusamy@gmail.com}\\
+%     \textsc{github:}    & \href{https://github.com/GalanthusPlicatus}{GalanthusPlicatus}
+% \end{tabular}
+
+
+
+\section{Technical Skills}
 \begin{tabular}{rl}
-    \textsc{date of birth:} & 15 December 1991 \\
-    \textsc{address:}   & 1647/62, East End E Main Rd, Jayanagar 9\textsuperscript{th} Block, Bangalore 560069, KA \\
-    %\textsc{Permanent Address:}   & 6/32, Siruvani Main Rd, Alandurai, Coimbarote 641101, IN \\
-    \textsc{phone:}     & +91 87608 66018\\
-    \textsc{email:}     & \href{mailto:saranya91velusamy@gmail.com}{saranya91velusamy@gmail.com}\\
-    \textsc{github:}    & \href{https://github.com/GalanthusPlicatus}{GalanthusPlicatus}
+ Intermediate Level:& Python, Django, git, \textsc{HTML}, Mercurial, \textsc{JSON}, Postgre\textsc{SQL},  \textsc{Linux} \setmainfont[SmallCapsFont=Fontin-SmallCaps.otf]{Fontin.otf}\\
+ Basic Level:& \textsc{C++}, my\textsc{SQL}, RabbitMQ, AngularJS, \textsc{CSS}, Javascript, \textsc{bash}, dot\textsc{NET}\\
+Applications:& Atom, Sublime, Adobe Creative Suite\\
 \end{tabular}
+
 
 %Section: Professional Career at the top
 \section{Professional Career}
 \begin{tabular}{r|p{11cm}}
- \emph{Current} & Freelance Django Developer 
- \\ & 
- \footnotesize{Worked as back-end developer for projects using the Django - PostgreSQL - RabbitMQ stack.} \\
- \multicolumn{2}{c}{} \\
- 
- \textsc{Jan. - Nov. 2015} & NextDrop Smart Water Systems Pvt. Ltd. \\&\footnotesize{Grateful to be part of this start-up which provided an excellent platform to work with and learn new and experimental technologies. Played a key role in data modelling and building data analytics dashboards. }
+ \emph{Current} & Freelance Django Developer
  \\ &
- \footnotesize{Projects Worked On:} 
+ \footnotesize{Worked as back-end developer for projects using the Django - PostgreSQL - RabbitMQ stack.}
+ \\ &
+ \footnotesize{Projects Worked On:}
  \\ &
  \begin{tabular}{rl}
- 
- LatLong:& \footnotesize{\textsc{Django, Google Geocoding API}: Geolocated 80\% of customers with} 
+
+ Kube Cuisines:& \footnotesize{\textsc{Django, PostgreSQL, Celery}: Wrote automated tests and}
+ \\ & \footnotesize{asynchronous tasks for an internal reporting and resource}
+ \\ & \footnotesize{management software for Kube Cuisines Pvt. Ltd.} \setmainfont[SmallCapsFont=Fontin-SmallCaps.otf]{Fontin.otf}
+ \\
+\end{tabular}\\
+
+ \multicolumn{2}{c}{} \\
+
+ \textsc{Jan. - Nov. 2015} & NextDrop Smart Water Systems Pvt. Ltd. \\&\footnotesize{Grateful to be part of this start-up which provided an excellent platform to work with and learn new and experimental technologies. Played a key role in data modelling and building data analytics dashboards. }
+ \\ &
+ \footnotesize{Projects Worked On:}
+ \\ &
+ \begin{tabular}{rl}
+
+ LatLong:& \footnotesize{\textsc{Django, Google Geocoding API}: Geolocated 80\% of customers with}
  \\ & \footnotesize{Indian addresses with accuracy of more than 60\% and structured}
  \\ & \footnotesize{address components from a single string.} \setmainfont[SmallCapsFont=Fontin-SmallCaps.otf]{Fontin.otf}
  \\
- 
+
 USSD:& \footnotesize{\textsc{KooKoo Gateway, Django}: Implimented a new acquisition channel for}
 \\ & \footnotesize{new customer registration and a new feedback channel using USSD}
 \\ & \footnotesize{for interacting with non-smart, text based and feature phone devices.}
@@ -117,29 +144,29 @@ ODKForms:& \footnotesize{\textsc{OpenDataKit Build, Django}: Gather field data t
 \\ & \footnotesize{reducing manpower requirement.}
 \\
 \end{tabular}\\
- 
- 
+
+
  \multicolumn{2}{c}{} \\
- 
+
 \end{tabular}
 
 %Section: Projects
 \section{Academic \& Other Projects}
 \begin{tabular}{r|p{11cm}}
- 
+
   \emph{Current} & Bucket-list Tracker \\
   \textsc{Exp. June 2016} & \footnotesize{This is a pet project in Django which is intented to help people organize and track their bucket-list wishes and in the future help other users discover interesting tasks to add to their bucketlist. }\\\multicolumn{2}{c}{} \\
- 
+
  \textsc{June 2014} & Network Management System \\&\footnotesize{A web based NMS to register and manage users for a network and generate configuration files for various Linux based network based daemons.}\\\multicolumn{2}{c}{} \\
-  
+
  \textsc{April 2013} & Trusted Third Party Audit for Cloud Storage Service \\&\footnotesize{This is a coursework-based project which mainly analyzes the problems in current cloud storage, mainly in the area of data integrity using a Third Party Auditor. }\\\multicolumn{2}{c}{} \\
- 
+
 \textsc{Summer 2012} & Mini Project Intern at \textsc{Visiware Technologies}, \emph{Chennai}\\&\footnotesize{Played an active role in creating a CRUD application titled ``\emph{Ultra Laboratory Utensil}'' in C\# for efficient management of resources in a lab.}
 \end{tabular}
 
 %Section: Education
 \section{Education}
-\begin{tabular}{rl}	
+\begin{tabular}{rl}
 
 \textsc{June} 2014 & Master of Technology in \textsc{Multimedia Technology} \\&\normalsize\textbf{Karunya University}, Coimbatore\\
 & Thesis: ``Face and Iris Recognition for Mobile Engagement'' | \small Advisor: Ms. Bindhu \textsc{Shamily}\\
@@ -167,30 +194,11 @@ ODKForms:& \footnotesize{\textsc{OpenDataKit Build, Django}: Gather field data t
 &\textsc{Percentage}: 89.2\% | \textsc{Activity:} Formed a group to help with old age home expenses.
 \end{tabular}
 
-\section{Technical Skills}
-\begin{tabular}{rl}
- Intermediate Level:& Python, Django, git, \textsc{HTML}, Mercurial, \textsc{JSON}, Postgre\textsc{SQL},  \textsc{Linux}, Open\textsc{CV} \setmainfont[SmallCapsFont=Fontin-SmallCaps.otf]{Fontin.otf}\\
- Basic Level:& \textsc{C++}, my\textsc{SQL}, RebbitMQ, \textsc{CSS}, Javascript, \textsc{bash}, dot\textsc{NET}, Mat\textsc{Lab}\\
-Applications:& Adobe Creative Suite, AutoDesk Maya\\
-\end{tabular}
-
-\section{Functional Skills}
-Project Management, Team Management, Good Communication Skill, Problem Solving, Recruiter, Scrum Master, Agile, Project Planning \\
-
-%Section: Scholarships and additional info
-\section{Certificates and Workshops}
-\begin{tabular}{rl}
-\textsc{Exp. Jul.} 2016 & Algorithms {\footnotesize{(Crunching Social Networks)}} | \textsc{Udacity}, E-le\\
-\textsc{Dec.} 2014 & Intro to Computer Science {\footnotesize{(Build a Search Engine \& a Social Network)}} | \textsc{Udacity}, E-le\\
-\textsc{Feb.} 2014 & Image Processing Workshop | {\textsc{Amrita University}}\\
-\textsc{Apr.} 2012 & Oracle Certified Associate\\
-\textsc{Feb.} 2012 & Ethical Hacking Workshop by {\textsc{TechDefence Pvt. Ltd.}} | {\textsc{Karunya University}}
-\end{tabular}
 
 %Section: Languages
 \section{Languages}
 \begin{tabular}{rl}
- \textsc{Tamil:}&Mothertongue\\
+ \textsc{Tamil:}&Native\\
 \textsc{English:}&Fluent\\
 \end{tabular}
 
@@ -214,4 +222,3 @@ Technology, Travelling, Photography, Application \& Web Programming, Social Serv
 
 
 \end{document}
-
