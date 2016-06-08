@@ -1,224 +1,91 @@
-\documentclass[a4paper,10pt]{article}
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
 
-%A Few Useful Packages
-\usepackage{marvosym}
-\usepackage{fontspec} 					%for loading fonts
-\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
-\RequirePackage{color,graphicx}
-\usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[big]{layaureo} 				%better formatting of the A4 page
-% an alternative to Layaureo can be ** \usepackage{fullpage} **
-\usepackage{supertabular} 				%for Grades
-\usepackage{titlesec}					%custom \section
 
-%Setup hyperref package, and colours for links
-\usepackage{hyperref}
-\definecolor{linkcolour}{rgb}{0,0.2,0.6}
-\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Configuration
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Themes: Awesome-CV
+\documentclass[11pt, a4paper]{awesome-cv}
 
-%FONTS
-\defaultfontfeatures{Mapping=tex-text}
-%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
-%%% modified for Karol Kozioł for ShareLaTeX use
-\setmainfont[
-SmallCapsFont = Fontin-SmallCaps.otf,
-BoldFont = Fontin-Bold.otf,
-ItalicFont = Fontin-Italic.otf
-]
-{Fontin.otf}
-%%%
+%%% Override a directory location for fonts(default: 'fonts/')
+\fontdir[fonts/]
 
-%CV Sections inspired by:
-%http://stefano.italians.nl/archives/26
-\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{0pt}{3pt}
-%Tweak a bit the top margin
-%\addtolength{\voffset}{-1.3cm}
+%%% Configure a directory location for sections
+\newcommand*{\sectiondir}{resume/}
 
-%Italian hyphenation for the word: ''corporations''
-\hyphenation{im-pre-se}
+%%% Override color
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+%% Color for highlight
+% Define your custom color if you don't like awesome colors
+\colorlet{awesome}{awesome-red}
+%\definecolor{awesome}{HTML}{CA63A8}
+%% Colors for text
+%\definecolor{darktext}{HTML}{414141}
+%\definecolor{text}{HTML}{414141}
+%\definecolor{graytext}{HTML}{414141}
+%\definecolor{lighttext}{HTML}{414141}
 
-%-------------WATERMARK TEST [**not part of a CV**]---------------
-\usepackage[absolute]{textpos}
+%%% Override a separator for social informations in header(default: ' | ')
+%\headersocialsep[\quad\textbar\quad]
 
-\setlength{\TPHorizModule}{30mm}
-\setlength{\TPVertModule}{\TPHorizModule}
-\textblockorigin{1mm}{0.65\paperheight}
-\setlength{\parindent}{0pt}
-\def\footerlink{}
 
-%--------------------BEGIN DOCUMENT----------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     3rd party packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Needed to divide into several files
+\usepackage{import}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Personal Data
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Essentials
+\name{Saranya Velusamy}{}
+\address{\#1647/62, East End A Main Road, Jayanagar 9\textsuperscript{th} Block, Bangalore 560041, Karnataka, India}
+\mobile{(+91) 8760866018} 
+%%% Social
+\email{saranya91velusamy@gmail.com}
+%\homepage{www.posquit0.com}
+\github{GalanthusPlicatus}
+%\linkedin{posquit0}
+%%% Optionals
+%\position{Software Engineer{\enskip\cdotp\enskip}Security Expert}
+%\quote{``Make the change that you want to see in the world."}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Content
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Make a footer for CV with three arguments(<left>, <center>, <right>)
+\makecvfooter
+  {\today}
+  {Saranya Velusamy~~~·~~~Résumé}
+  {\thepage}
+
 \begin{document}
+%%% Make a header for CV with personal data
+\makecvheader
 
-%WATERMARK TEST [**not part of a CV**]---------------
-%\font\wm=''Baskerville:color=787878'' at 8pt
-%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
-%{\wm
-%	\begin{textblock}{1}(0,0)
-%		\rotatebox{-90}{\parbox{500mm}{
-%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for
-%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
-%		}
-%	}
-%	\end{textblock}
-%}
-
-% \pagestyle{empty} % non-numbered pages
-
-\font\fb=''[cmr10]'' %for use with \LaTeX command
-
-%--------------------TITLE-------------
-\par{\centering
-		{\Huge Saranya Velusamy
-	} \\ \vskip-\lastskip%
-%	{\fontfamily{pzc}\selectfont\Large Curriculum Vit\ae}
-\begin{tabular}{rl}
-\href{mailto:saranya91velusamy@gmail.com}{saranya91velusamy@gmail.com}&
-    {github:} \href{https://github.com/GalanthusPlicatus}{GalanthusPlicatus}\textsc +91 87608 66018\\
-    \textsc \#1647/62, East End Main Rd, Jayanagar 9\textsuperscript{th} Block, Bangalore 560069, KA\\
-\end{tabular}
-
-	\bigskip
-	\par}
-
-%--------------------SECTIONS-----------------------------------
-%Section: Personal Data
-% \section{Personal Data}
-
-% \begin{tabular}{rl}
-%     \textsc{date of birth:} & 15 December 1991 \\
-%     \textsc{address:}   & 1647/62, East End Main Rd, Jayanagar 9\textsuperscript{th} Block, Bangalore 560069, KA \\
-%     %\textsc{Permanent Address:}   & 6/32, Siruvani Main Rd, Alandurai, Coimbarote 641101, IN \\
-%     \textsc{phone:}     & +91 87608 66018\\
-%     \textsc{email:}     & \href{mailto:saranya91velusamy@gmail.com}{saranya91velusamy@gmail.com}\\
-%     \textsc{github:}    & \href{https://github.com/GalanthusPlicatus}{GalanthusPlicatus}
-% \end{tabular}
-
-
-
-\section{Technical Skills}
-\begin{tabular}{rl}
- Intermediate Level:& Python, Django, git, \textsc{HTML}, Mercurial, \textsc{JSON}, Postgre\textsc{SQL},  \textsc{Linux} \setmainfont[SmallCapsFont=Fontin-SmallCaps.otf]{Fontin.otf}\\
- Basic Level:& \textsc{C++}, my\textsc{SQL}, RabbitMQ, AngularJS, \textsc{CSS}, Javascript, \textsc{bash}, dot\textsc{NET}\\
-Applications:& Atom, Sublime, Adobe Creative Suite\\
-\end{tabular}
-
-
-%Section: Professional Career at the top
-\section{Professional Career}
-\begin{tabular}{r|p{11cm}}
- \emph{Current} & Freelance Django Developer
- \\ &
- \footnotesize{Worked as back-end developer for projects using the Django - PostgreSQL - RabbitMQ stack.}
- \\ &
- \footnotesize{Projects Worked On:}
- \\ &
- \begin{tabular}{rl}
-
- Kube Cuisines:& \footnotesize{\textsc{Django, PostgreSQL, Celery}: Wrote automated tests and}
- \\ & \footnotesize{asynchronous tasks for an internal reporting and resource}
- \\ & \footnotesize{management software for Kube Cuisines Pvt. Ltd.} \setmainfont[SmallCapsFont=Fontin-SmallCaps.otf]{Fontin.otf}
- \\
-\end{tabular}\\
-
- \multicolumn{2}{c}{} \\
-
- \textsc{Jan. - Nov. 2015} & NextDrop Smart Water Systems Pvt. Ltd. \\&\footnotesize{Grateful to be part of this start-up which provided an excellent platform to work with and learn new and experimental technologies. Played a key role in data modelling and building data analytics dashboards. }
- \\ &
- \footnotesize{Projects Worked On:}
- \\ &
- \begin{tabular}{rl}
-
- LatLong:& \footnotesize{\textsc{Django, Google Geocoding API}: Geolocated 80\% of customers with}
- \\ & \footnotesize{Indian addresses with accuracy of more than 60\% and structured}
- \\ & \footnotesize{address components from a single string.} \setmainfont[SmallCapsFont=Fontin-SmallCaps.otf]{Fontin.otf}
- \\
-
-USSD:& \footnotesize{\textsc{KooKoo Gateway, Django}: Implimented a new acquisition channel for}
-\\ & \footnotesize{new customer registration and a new feedback channel using USSD}
-\\ & \footnotesize{for interacting with non-smart, text based and feature phone devices.}
-\\
-
-ODKForms:& \footnotesize{\textsc{OpenDataKit Build, Django}: Gather field data through ODK devices.}
-\\ & \footnotesize{95\% of the data was collected and processed for Django, greatly}
-\\ & \footnotesize{reducing manpower requirement.}
-\\
-\end{tabular}\\
-
-
- \multicolumn{2}{c}{} \\
-
-\end{tabular}
-
-%Section: Projects
-\section{Academic \& Other Projects}
-\begin{tabular}{r|p{11cm}}
-
-  \emph{Current} & Bucket-list Tracker \\
-  \textsc{Exp. June 2016} & \footnotesize{This is a pet project in Django which is intented to help people organize and track their bucket-list wishes and in the future help other users discover interesting tasks to add to their bucketlist. }\\\multicolumn{2}{c}{} \\
-
- \textsc{June 2014} & Network Management System \\&\footnotesize{A web based NMS to register and manage users for a network and generate configuration files for various Linux based network based daemons.}\\\multicolumn{2}{c}{} \\
-
- \textsc{April 2013} & Trusted Third Party Audit for Cloud Storage Service \\&\footnotesize{This is a coursework-based project which mainly analyzes the problems in current cloud storage, mainly in the area of data integrity using a Third Party Auditor. }\\\multicolumn{2}{c}{} \\
-
-\textsc{Summer 2012} & Mini Project Intern at \textsc{Visiware Technologies}, \emph{Chennai}\\&\footnotesize{Played an active role in creating a CRUD application titled ``\emph{Ultra Laboratory Utensil}'' in C\# for efficient management of resources in a lab.}
-\end{tabular}
-
-%Section: Education
-\section{Education}
-\begin{tabular}{rl}
-
-\textsc{June} 2014 & Master of Technology in \textsc{Multimedia Technology} \\&\normalsize\textbf{Karunya University}, Coimbatore\\
-& Thesis: ``Face and Iris Recognition for Mobile Engagement'' | \small Advisor: Ms. Bindhu \textsc{Shamily}\\
-&\normalsize Cum. \textsc{GPA}: 7.89 / 10 | \textsc{Activity:} Led Registration Committee for a National Event
-% Uncomment below line for online version of PDF.
-%\hyperlink{grds}{\hfill| \footnotesize Detailed List of Exams}
-\\&\\
-
-\textsc{May} 2013 & Bachelor of Technology in \textsc{Information Technology} \\&200/200 credits, \normalsize\textbf{Karunya University}, Coimbatore\\
-& Thesis: ``Trusted Third Party Audit for Cloud Storage Service'' | \small Advisor: Mrs. Ester \textsc{Daniel}\\
-&\normalsize Cum. \textsc{GPA}: 7.89 / 10 | \textsc{Achievements:} First candidate to be recruited by Capgemini.\\
-&\hspace{16em} Secured scholarship to pursue MS in Israel.
-% Uncomment below line for online version of PDF.
-%\hyperlink{grds_cleli}{\hfill| \footnotesize Detailed List of Exams}
-\\&\\
-
-\textsc{Mar.} 2009& Higher Secondary at \textbf{SN Martic Hr. Sec. School}, Coimbatore\\
-& Specalization: Science, Mathematics \& Computer Science\\
-&\textsc{Percentage}: 80.9\% | \textsc{Activity:} Social Worker
-% Uncomment below line for online version of PDF.
-%\hyperlink{grds_usc}{\hfill| \footnotesize Detailed List of Exams}
-\\&\\
-
-\textsc{Mar.} 2007& SSLC at \textbf{Govt. Hr. Sec. School}, Alandurai, Coimbatore\\
-&\textsc{Percentage}: 89.2\% | \textsc{Activity:} Formed a group to help with old age home expenses.
-\end{tabular}
-
-
-%Section: Languages
-\section{Languages}
-\begin{tabular}{rl}
- \textsc{Tamil:}&Native\\
-\textsc{English:}&Fluent\\
-\end{tabular}
-
-\section{Interests and Activities}
-Technology, Travelling, Photography, Application \& Web Programming, Social Service, Animation, Visual Effects, Reading Books, Archeology, History, Music \& Culture. \\
-\vskip-\lastskip
-\begin{tabular}{rl}
-2010 - 2011 & National Service Scheme, Karunya University \\
-2009 - 2010 & Rotaract Club, Karunya University
-\end{tabular}
-
-\bigskip
-
-% Footer
-\begin{center}
-  \begin{footnotesize}
-    Last updated: \today \\
-    \href{\footerlink}{\texttt{\footerlink}}
-  \end{footnotesize}
-\end{center}
-
+%%% Import contents
+\import{\sectiondir}{techskills.tex}
+\import{\sectiondir}{experience.tex}
+\import{\sectiondir}{education.tex}
+\import{\sectiondir}{extracurricular.tex}
+\import{\sectiondir}{presentation.tex}
+\import{\sectiondir}{writing.tex}
 
 \end{document}
